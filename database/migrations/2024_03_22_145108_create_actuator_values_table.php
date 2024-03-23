@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('controller_captors', function (Blueprint $table) {
-            //
+        Schema::create('actuator_values', function (Blueprint $table) {
+            $table->id();
+            $table->json('values');
+            $table->foreignId('actuator_id')->constrained('actuators');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('controller_captors', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('actuator_values');
     }
 };

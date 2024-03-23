@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ControllerCaptorResource\Pages;
-use App\Filament\Resources\ControllerCaptorResource\RelationManagers;
-use App\Models\ControllerCaptor;
+use App\Filament\Resources\ActuatorValueResource\Pages;
+use App\Models\ActuatorValue;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,9 +12,9 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ControllerCaptorResource extends Resource
+class ActuatorValueResource extends Resource
 {
-    protected static ?string $model = ControllerCaptor::class;
+    protected static ?string $model = ActuatorValue::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -43,20 +42,20 @@ class ControllerCaptorResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListControllerCaptors::route('/'),
-            'create' => Pages\CreateControllerCaptor::route('/create'),
-            'edit' => Pages\EditControllerCaptor::route('/{record}/edit'),
+            'index' => Pages\ListActuatorValues::route('/'),
+            'create' => Pages\CreateActuatorValue::route('/create'),
+            'edit' => Pages\EditActuatorValue::route('/{record}/edit'),
         ];
-    }    
+    }
 }

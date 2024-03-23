@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('administrators', function (Blueprint $table) {
-            //
+        Schema::create('captor_values', function (Blueprint $table) {
+            $table->id();
+            $table->json('values');
+            $table->foreignId('captor_id')->constrained('captors');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('administrators', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('captor_values');
     }
 };

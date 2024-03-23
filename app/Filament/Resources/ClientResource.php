@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AdministratorResource\Pages;
-use App\Filament\Resources\AdministratorResource\RelationManagers;
-use App\Models\Administrator;
+use App\Filament\Resources\ClientResource\Pages;
+use App\Models\Client;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,9 +12,9 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AdministratorResource extends Resource
+class ClientResource extends Resource
 {
-    protected static ?string $model = Administrator::class;
+    protected static ?string $model = Client::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
@@ -32,14 +31,6 @@ class AdministratorResource extends Resource
                     ->required()
                     ->label('Email')
                     ->maxLength(255),
-                Forms\Components\Select::make('role')
-                    ->options([
-                        'admin' => 'Admin',
-                        'super_admin' => 'Super Admin',
-                    ])
-                    ->label('Role')
-                    ->required(),
-                // Note: Considérer la gestion du mot de passe comme pour UserResource
             ]);
     }
 
@@ -55,8 +46,6 @@ class AdministratorResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->label('Email'),
-                Tables\Columns\TextColumn::make('role')
-                    ->label('Role'),
             ])
             ->filters([
                 // Ajouter des filtres si nécessaire
@@ -68,20 +57,20 @@ class AdministratorResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             // Ajouter des gestionnaires de relations si nécessaire
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAdministrators::route('/'),
-            'create' => Pages\CreateAdministrator::route('/create'),
-            'edit' => Pages\EditAdministrator::route('/{record}/edit'),
+            'index' => Pages\ListClient::route('/'),
+            'create' => Pages\CreateClient::route('/create'),
+            'edit' => Pages\EditClient::route('/{record}/edit'),
         ];
-    }    
+    }
 }
