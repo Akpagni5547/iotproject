@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->foreignId('controller_id')->constrained('controllers');
-            $table->foreignId('client_id')->constrained('clients');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

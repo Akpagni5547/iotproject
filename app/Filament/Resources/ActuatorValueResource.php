@@ -3,26 +3,37 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ActuatorValueResource\Pages;
+use App\Models\Actuator;
 use App\Models\ActuatorValue;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ActuatorValueResource extends Resource
 {
     protected static ?string $model = ActuatorValue::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationLabel = 'Valeurs des actuateurs';
+    protected static ?string $modelLabel = 'Valeurs des actuateurs';
+    protected static ?string $navigationGroup = 'Actuateurs et valeurs';
+    protected static ?int $navigationSort = 1;
+
+    protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Select::make('controller_id')
+                    ->required()
+                    ->label('Actuateur')
+                    ->options(Actuator::all()->pluck('name', 'id'))
+                    ->searchable(),
+
+                Forms\Components\KeyValue::make('values')
+                    ->label('Valeurs')
             ]);
     }
 
@@ -30,13 +41,19 @@ class ActuatorValueResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('actuator.name')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Actuateur'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                Tables\Actions\DeleteAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),

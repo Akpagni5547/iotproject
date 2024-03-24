@@ -10,7 +10,7 @@ class EditObjet extends EditRecord
 {
     protected static string $resource = ObjetResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),
