@@ -26,7 +26,6 @@ class ClientResource extends Resource
     public static function form(Form $form): Form
     {
         $user_id = Auth::id();
-
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
@@ -42,8 +41,7 @@ class ClientResource extends Resource
                     ->password()
                     ->required()
                     ->label('Password')
-                    ->maxLength(255)
-                    ->hiddenOn('edit'),
+                    ->maxLength(255),
                 Forms\Components\Select::make('user_id')
                     ->disabled()
                     ->default($user_id)

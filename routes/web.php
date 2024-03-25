@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Auth::routes();
+//Language Translation
+Route::get('index/{locale}', [App\Http\Controllers\DashboardController::class, 'lang']);
+
+// Route no-protected
+Route::prefix('auth')->middleware('guest:client')->group(function () {
+    // login
+    Route::get('/login', [AuthController::class, 'loginView'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+});
+
+Route::middleware('auth:client')->group(function () {
+    Route::get('/', function () {
+
+        return redirect('/dashboard');
+    });
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'index'])->name('project');
+    Route::get('/objects', [App\Http\Controllers\ObjectController::class, 'index'])->name('object');
 });

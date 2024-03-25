@@ -10,7 +10,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "filament/filament": "^2.0"
+        "filament/filament": "^2.0",
+        "laravel/ui": "^4.2"
 
     },
     "require-dev": {
