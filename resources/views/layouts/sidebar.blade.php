@@ -45,7 +45,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ Request::is('objects') ? 'active' : '' }}" href="{{ route('object') }}">
+                    <a class="nav-link menu-link {{ Request::is('objects*') ? 'active' : '' }}" href="{{ route('object') }}">
                         <i data-feather="box" class="icon-dual"></i> <span>@lang('translation.object')</span>
                     </a>
                 </li>
