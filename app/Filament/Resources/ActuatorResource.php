@@ -6,7 +6,6 @@ use App\Filament\Resources\ActuatorResource\Pages;
 use App\Models\Actuator;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
-use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 
 class ActuatorResource extends Resource

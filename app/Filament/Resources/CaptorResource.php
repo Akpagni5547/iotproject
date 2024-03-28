@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Filament\Resources;
+use App\Filament\Resources\CaptorResource\Pages;
 
 use App\Models\Captor;
 use Filament\Resources\Resource;
@@ -55,7 +56,7 @@ class CaptorResource extends Resource
     public static function getPages(): array
     {
         return [
-
+            'index' => Pages\ListCaptors::route('/'),
         ];
     }
 }
