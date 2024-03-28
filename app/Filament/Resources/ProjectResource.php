@@ -76,7 +76,6 @@ class ProjectResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
@@ -91,8 +90,8 @@ class ProjectResource extends Resource
     {
         return [
             'index' => Pages\ListProjects::route('/'),
-            'view' => Pages\ViewProject::route('/{record}'),
             'create' => Pages\CreateProject::route('/create'),
+            'view' => Pages\ViewProject::route('/{record}'),
             'edit' => Pages\EditProject::route('/{record}/edit'),
         ];
     }

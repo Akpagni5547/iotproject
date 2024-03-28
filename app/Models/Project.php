@@ -9,6 +9,8 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $table = 'projects';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -35,8 +37,5 @@ class Project extends Model
     {
         return $this->hasMany(Objet::class, 'project_id');
     }
-
-    // hasManyThrough objets to controller
-//        return $this->hasManyThrough(Controller::class, Objet::class, 'project_id', 'object_id', 'id', 'id');
 
 }
