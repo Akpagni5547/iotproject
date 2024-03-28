@@ -34,4 +34,5 @@ Route::middleware('auth:client')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'index'])->name('project');
     Route::get('/objects', [App\Http\Controllers\ObjectController::class, 'index'])->name('object');
+    Route::get('/objects/{id}', [App\Http\Controllers\ObjectController::class, 'details'])->name('object.details');
 });

@@ -8,7 +8,7 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = Project::query()->with('objets')->with('controllers')->get();
+        $projects = Project::query()->with('objets')->get();
         return view('clients.projects.index', compact('projects'));
     }
 }

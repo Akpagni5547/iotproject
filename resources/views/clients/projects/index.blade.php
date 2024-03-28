@@ -24,11 +24,10 @@
                                 <div class="card team-box">
                                     <div class="team-cover">
                                         <img src="{{"build/images/small/img-". $num .".jpg"}}" alt=""
-                                             class="img-fluid"/>
+                                             class="img-fluid" height="40"/>
                                     </div>
-                                    <div class="card-body p-4">
+                                    <div class="card-body pb-2 mb-4">
                                         <div class="row align-items-center team-row">
-
                                             <div class="col-lg-4 col">
                                                 <div class="team-profile-img">
                                                     <div class="team-content">
@@ -42,37 +41,34 @@
                                             </div>
                                             <div class="col-lg-4 col">
                                                 <div class="row text-muted text-center">
-                                                    <div class="col-6 border-end border-end-dashed">
+                                                    <div class="col-12 border-end border-end-dashed">
                                                         <h5 class="mb-1 projects-num">{{count($project->objets)}}</h5>
                                                         <p class="text-muted mb-0">Objets</p>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 tasks-num">{{count($project->controllers)}}</h5>
-                                                        <p class="text-muted mb-0">Microcontrolleurs</p>
+
+                                                </div>
+                                                <div class="col-lg-2 col">
+                                                    <div class="text-end">
+                                                        <a href="{{route('object', ['search' => $project->id])}}"
+                                                           class="btn btn-light view-btn">Voir</a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-2 col">
-                                                <div class="text-end">
-                                                    <a href="#" class="btn btn-light view-btn">Voir</a>
-                                                </div>
-                                            </div>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
-                        @endforeach
                     </div>
                 </div>
-            </div>
-        </div><!-- end col -->
-    </div>
-    <!--end row-->
+            </div><!-- end col -->
+        </div>
+        <!--end row-->
 
-@endsection
-@section('script')
-    {{--    <script src="{{ URL::asset('build/js/pages/team.init.js') }}"></script>--}}
+        @endsection
+        @section('script')
+            {{--    <script src="{{ URL::asset('build/js/pages/team.init.js') }}"></script>--}}
 
-    <script src="{{ URL::asset('build/js/app.js') }}"></script>
+            <script src="{{ URL::asset('build/js/app.js') }}"></script>
 @endsection
