@@ -3,6 +3,7 @@
 use App\Models\Captor;
 use App\Models\Objet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,7 @@ Route::get('/secret/endpoint-values-captors-json-payload', function (Request $re
     $payload = $request->all();
     $code = $payload['code'];
     $object = Objet::where('code', $code)->firstOrfail();
+    Log::info('Payload received: ', ['payload' => $payload, 'object' => $object]);
     Captor::create([
         'values' => json_encode($payload),
         'object_id' => $object->id

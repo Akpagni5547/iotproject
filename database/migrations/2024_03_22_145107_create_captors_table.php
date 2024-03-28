@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('captors', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->json('values');
             $table->foreignId('object_id')->constrained('objects');
             $table->timestamps();
