@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('actuators', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->foreignId('controller_id')->constrained('controllers');
-            $table->foreignId('user_id')->constrained('users');
+            $table->json('values');
+            $table->foreignId('object_id')->constrained('objects');
             $table->timestamps();
         });
     }

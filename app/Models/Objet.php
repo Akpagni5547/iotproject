@@ -17,10 +17,12 @@ class Objet extends Model
      */
     protected $fillable = [
         'name',
+        'code',
+        'elements',
         'description',
+        'position',
         'user_id',
         'project_id',
-        'client_id'
     ];
 
     public function project()
@@ -33,9 +35,14 @@ class Objet extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function client()
+    public function captors()
     {
-        return $this->belongsTo(Client::class);
+        return $this->hasMany(Captor::class);
+    }
+
+    public function actuators()
+    {
+        return $this->hasMany(Actuator::class);
     }
 
 }

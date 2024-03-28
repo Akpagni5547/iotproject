@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('objects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('code');
+            $table->string('elements');
             $table->string('description');
+            $table->string('position');
             $table->foreignId('project_id')->constrained('projects');
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('client_id')->constrained('clients');
             $table->timestamps();
         });
     }

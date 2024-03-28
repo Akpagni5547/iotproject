@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Captor;
+use App\Models\Objet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/secret/endpoint-values-captors-json-payload', function (Request $request) {
+    $payload = $request->all();
+    $code = $payload['code'];
+    $object = Objet::where('code', $code)->firstOrfail();
+    Captor::create([
+        'values' => json_encode($payload),
+        'object_id' => $object->id
+    ]);
+    return response()->json(['status' => 200, 'message' => 'success']);
 });

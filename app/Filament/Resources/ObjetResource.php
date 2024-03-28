@@ -7,6 +7,8 @@ use App\Models\Client;
 use App\Models\Objet;
 use App\Models\Project;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -31,25 +33,32 @@ class ObjetResource extends Resource
         $user_id = Auth::id();
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->required()
                     ->label('Name')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('description')
+                TextInput::make('code')
+                    ->required()
+                    ->label('Code')
+                    ->maxLength(20),
+                TextInput::make('elements')
+                    ->required()
+                    ->label('Elements')
+                    ->maxLength(255),
+                TextInput::make('description')
                     ->required()
                     ->label('Description')
                     ->maxLength(255),
-                Forms\Components\Select::make('project_id')
+                TextInput::make('position')
+                    ->required()
+                    ->label('Position')
+                    ->maxLength(255),
+                Select::make('project_id')
                     ->required()
                     ->label('Projet')
                     ->options(Project::all()->pluck('name', 'id'))
                     ->searchable(),
-                Forms\Components\Select::make('client_id')
-                    ->required()
-                    ->label('Client')
-                    ->options(Client::all()->pluck('name', 'id'))
-                    ->searchable(),
-                Forms\Components\Select::make('user_id')
+                Select::make('user_id')
                     ->disabled()
                     ->default($user_id)
                     ->relationship('user', 'name')
@@ -65,16 +74,22 @@ class ObjetResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->label('Name'),
+                Tables\Columns\TextColumn::make('code')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Code'),
+                Tables\Columns\TextColumn::make('position')
+                    ->searchable()
+                    ->sortable()
+                    ->label('Position'),
+                Tables\Columns\TextColumn::make('elements')
+                    ->label('Elements'),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Description'),
                 Tables\Columns\TextColumn::make('project.name')
                     ->searchable()
                     ->sortable()
                     ->label('Projet'),
-                Tables\Columns\TextColumn::make('client.name')
-                    ->searchable()
-                    ->sortable()
-                    ->label('Client'),
                 Tables\Columns\TextColumn::make('user.name')
                     ->searchable()
                     ->sortable()

@@ -36,10 +36,7 @@ class Project extends Model
         return $this->hasMany(Objet::class, 'project_id');
     }
 
-    public function controllers()
-    {
-        // hasManyThrough objets to controller
-        return $this->hasManyThrough(Controller::class, Objet::class, 'project_id', 'object_id', 'id', 'id');
+    // hasManyThrough objets to controller
+//        return $this->hasManyThrough(Controller::class, Objet::class, 'project_id', 'object_id', 'id', 'id');
 
-    }
 }

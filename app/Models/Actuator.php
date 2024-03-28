@@ -15,19 +15,17 @@ class Actuator extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'description',
-        'controller_id',
-        'user_id'
+        'values',
+        'object_id',
     ];
 
-    public function controller()
+    protected $casts = [
+        'values' => 'json',
+    ];
+
+    public function object()
     {
-        return $this->belongsTo(Controller::class);
+        return $this->belongsTo(Objet::class, 'object_id');
     }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -49,5 +48,15 @@ class Client extends Authenticatable
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
+    public function objets()
+    {
+        return $this->hasManyThrough(Objet::class, Project::class, 'project_id', 'client_id', 'id', 'id');
     }
 }
