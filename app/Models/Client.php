@@ -57,6 +57,6 @@ class Client extends Authenticatable
 
     public function objets()
     {
-        return $this->hasManyThrough(Objet::class, Project::class, 'project_id', 'client_id', 'id', 'id');
+        return $this->hasManyThrough(Objet::class, Project::class, 'client_id', 'project_id', 'id', 'id');
     }
 }
