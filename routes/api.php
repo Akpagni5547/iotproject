@@ -5,6 +5,7 @@ use App\Models\Objet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,20 @@ Route::get('/secret/endpoint-values-captors-json-payload', function (Request $re
         'object_id' => $object->id
     ]);
     return response()->json(['status' => 200, 'message' => 'success']);
+});
+
+Route::get('/device-data', function (Request $request) {
+    // generate code to read file in app/Data/captors.json
+
+
+
+    $code = $request->query('code');
+    $filePath = base_path('app/Data/captors.json');
+    if (File::exists($filePath)) {
+        $jsonContent = File::get($filePath);
+        $captors = json_decode($jsonContent, true);
+        return response()->json($captors);
+    } else {
+        return response()->json(['error' => 'Fichier introuvable'], 404);
+    }
 });

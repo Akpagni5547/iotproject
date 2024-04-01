@@ -1783,6 +1783,7 @@ File: Main Js File
 		initComponents();
 		initLanguage();
 		isCollapseMenu();
+        pluginData();
 		initMenuItemScroll();
 	}
 	init();

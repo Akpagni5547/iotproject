@@ -1,0 +1,975 @@
+[
+    {
+        "id": "9",
+        "values": "{\"dateTime\":\"2024-03-29 17:06:48\",\"humidite\":22,\"luminosite\":750,\"temperature\":19}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "10",
+        "values": "{\"dateTime\":\"2024-03-29 17:08:46\",\"humidite\":22}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "11",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:26\",\"humidite\":39,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "12",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:29\",\"humidite\":91,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "13",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:35\",\"humidite\":88,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "14",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:40\",\"humidite\":3,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "15",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:45\",\"humidite\":24,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "16",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:50\",\"humidite\":33,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "17",
+        "values": "{\"dateTime\":\"2024-03-29 18:03:56\",\"humidite\":80,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "18",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:01\",\"humidite\":31,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "19",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:06\",\"humidite\":76,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "20",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:11\",\"humidite\":12,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "21",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:17\",\"humidite\":71,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "22",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:22\",\"humidite\":27,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "23",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:27\",\"humidite\":66,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "24",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:32\",\"humidite\":46,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "25",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:38\",\"humidite\":80,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "26",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:43\",\"humidite\":5,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "27",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:48\",\"humidite\":65,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "28",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:53\",\"humidite\":79,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "29",
+        "values": "{\"dateTime\":\"2024-03-29 18:04:59\",\"humidite\":55,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "30",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:04\",\"humidite\":60,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "31",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:09\",\"humidite\":7,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "32",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:14\",\"humidite\":4,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "33",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:20\",\"humidite\":64,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "34",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:25\",\"humidite\":45,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "35",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:30\",\"humidite\":87,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "36",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:35\",\"humidite\":68,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "37",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:41\",\"humidite\":43,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "38",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:46\",\"humidite\":18,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "39",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:51\",\"humidite\":34,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "40",
+        "values": "{\"dateTime\":\"2024-03-29 18:05:56\",\"humidite\":18,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "41",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:02\",\"humidite\":95,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "42",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:07\",\"humidite\":14,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "43",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:12\",\"humidite\":54,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "44",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:18\",\"humidite\":23,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "45",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:23\",\"humidite\":26,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "46",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:28\",\"humidite\":21,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "47",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:33\",\"humidite\":55,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "48",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:38\",\"humidite\":47,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "49",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:44\",\"humidite\":0,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "50",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:49\",\"humidite\":45,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "51",
+        "values": "{\"dateTime\":\"2024-03-29 18:06:54\",\"humidite\":5,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "52",
+        "values": "{\"dateTime\":\"2024-03-29 18:07:50\",\"humidite\":5,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "53",
+        "values": "{\"dateTime\":\"2024-03-29 18:07:52\",\"humidite\":55,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "54",
+        "values": "{\"dateTime\":\"2024-03-29 18:07:57\",\"humidite\":41,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "55",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:02\",\"humidite\":7,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "56",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:08\",\"humidite\":23,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "57",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:13\",\"humidite\":8,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "58",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:18\",\"humidite\":55,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "59",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:24\",\"humidite\":49,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "60",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:29\",\"humidite\":34,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "61",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:34\",\"humidite\":90,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "62",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:39\",\"humidite\":56,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "63",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:45\",\"humidite\":81,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "64",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:50\",\"humidite\":39,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "65",
+        "values": "{\"dateTime\":\"2024-03-29 18:08:55\",\"humidite\":93,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "66",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:00\",\"humidite\":91,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "67",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:06\",\"humidite\":37,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "68",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:11\",\"humidite\":52,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "69",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:16\",\"humidite\":20,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "70",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:21\",\"humidite\":76,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "71",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:27\",\"humidite\":96,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "72",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:32\",\"humidite\":40,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "73",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:37\",\"humidite\":85,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "74",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:43\",\"humidite\":6,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "75",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:48\",\"humidite\":95,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "76",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:53\",\"humidite\":23,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "77",
+        "values": "{\"dateTime\":\"2024-03-29 18:09:58\",\"humidite\":6,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "78",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:04\",\"humidite\":60,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "79",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:09\",\"humidite\":93,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "80",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:14\",\"humidite\":21,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "81",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:19\",\"humidite\":100,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "82",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:25\",\"humidite\":7,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "83",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:30\",\"humidite\":35,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "84",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:35\",\"humidite\":13,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "85",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:40\",\"humidite\":60,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "86",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:46\",\"humidite\":45,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "87",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:51\",\"humidite\":47,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "88",
+        "values": "{\"dateTime\":\"2024-03-29 18:10:56\",\"humidite\":16,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "89",
+        "values": "{\"dateTime\":\"2024-03-29 18:11:02\",\"humidite\":75,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "90",
+        "values": "{\"dateTime\":\"2024-03-29 18:11:07\",\"humidite\":95,\"luminosite\":5,\"temperature\":3}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "91",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:04\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2431}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "92",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:10\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2374}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "93",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:15\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2231}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "94",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:20\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2231}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "95",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:25\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2422}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "96",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:31\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2445}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "97",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:36\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2384}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "98",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:41\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2397}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "99",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:46\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":907}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "100",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:52\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2373}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "101",
+        "values": "{\"dateTime\":\"2024-03-29 18:41:57\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2276}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "102",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:02\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2251}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "103",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:08\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2265}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "104",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:13\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2467}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "105",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:18\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2311}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "106",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:23\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2225}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "107",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:29\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2334}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "108",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:34\",\"bouton\":1,\"luminosite\":0,\"photoresistance\":2209}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "109",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:39\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2233}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "110",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:44\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2222}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "111",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:50\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2398}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "112",
+        "values": "{\"dateTime\":\"2024-03-29 18:42:55\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2287}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "113",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:00\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2401}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "114",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:05\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2336}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "115",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:11\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2204}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "116",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:16\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2416}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "117",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:21\",\"bouton\":1,\"luminosite\":0,\"photoresistance\":2276}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "118",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:26\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2213}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "119",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:32\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2347}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "120",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:37\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2439}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "121",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:42\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2313}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "122",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:47\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2361}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "123",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:53\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2288}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "124",
+        "values": "{\"dateTime\":\"2024-03-29 18:43:58\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2366}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "125",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:03\",\"bouton\":0,\"luminosite\":0,\"photoresistance\":2338}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "126",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:21\",\"son\":0,\"bouton\":0,\"photoresistance\":2418}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "127",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:23\",\"son\":0,\"bouton\":0,\"photoresistance\":2287}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "128",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:28\",\"son\":0,\"bouton\":0,\"photoresistance\":2272}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "129",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:33\",\"son\":0,\"bouton\":0,\"photoresistance\":2248}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "130",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:39\",\"son\":0,\"bouton\":0,\"photoresistance\":2235}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "131",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:44\",\"son\":0,\"bouton\":0,\"photoresistance\":2416}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "132",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:49\",\"son\":0,\"bouton\":0,\"photoresistance\":2227}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "133",
+        "values": "{\"dateTime\":\"2024-03-29 18:44:54\",\"son\":0,\"bouton\":0,\"photoresistance\":2463}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "134",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:00\",\"son\":0,\"bouton\":0,\"photoresistance\":2361}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "135",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:05\",\"son\":0,\"bouton\":0,\"photoresistance\":2352}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "136",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:10\",\"son\":0,\"bouton\":0,\"photoresistance\":2414}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "137",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:16\",\"son\":0,\"bouton\":0,\"photoresistance\":2416}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "138",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:21\",\"son\":0,\"bouton\":0,\"photoresistance\":2320}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "139",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:26\",\"son\":0,\"bouton\":0,\"photoresistance\":2347}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "140",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:31\",\"son\":0,\"bouton\":0,\"photoresistance\":2206}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "141",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:37\",\"son\":0,\"bouton\":0,\"photoresistance\":2398}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "142",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:42\",\"son\":0,\"bouton\":0,\"photoresistance\":2282}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "143",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:47\",\"son\":0,\"bouton\":0,\"photoresistance\":2457}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "144",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:52\",\"son\":0,\"bouton\":0,\"photoresistance\":2323}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "145",
+        "values": "{\"dateTime\":\"2024-03-29 18:45:58\",\"son\":0,\"bouton\":0,\"photoresistance\":2460}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "146",
+        "values": "{\"dateTime\":\"2024-03-29 18:46:03\",\"son\":0,\"bouton\":0,\"photoresistance\":2369}",
+        "object_id": "2",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": "147",
+        "values": "{\"dateTime\":\"2024-03-30 02:44:41\",\"humidite\":22}",
+        "object_id": "1",
+        "created_at": null,
+        "updated_at": null
+    }
+]
