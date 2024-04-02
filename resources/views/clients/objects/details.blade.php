@@ -116,20 +116,20 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1 overflow-hidden">
                                         <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                            Moyenne luminisoté</p>
+                                            Etat de l'objet</p>
                                     </div>
 
                                 </div>
                                 <div class="d-flex align-items-end justify-content-between mt-4">
                                     <div>
-                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value"
-                                                                                              data-target="{{ $average['luminosity']['average'] }}">0</span>
+                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                            <span>Eteint</span>
                                         </h4>
 
                                     </div>
                                     <div class="avatar-sm flex-shrink-0">
                                     <span class="avatar-title bg-soft-primary rounded fs-3">
-                                        <i class="bx bx-sun text-primary"></i>
+                                        <i class="bx bx-camera text-primary"></i>
                                     </span>
                                     </div>
                                 </div>
@@ -144,26 +144,31 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1 overflow-hidden">
                                         <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                            Moyenne photorésistance</p>
+                                            Donnée actuelle</p>
                                     </div>
 
                                 </div>
                                 <div class="d-flex align-items-end justify-content-between mt-4">
                                     <div>
-                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value"
-                                                                                              data-target="{{ $average['photoresistance']['average'] }}">0</span>
-                                        </h4>
+                                        <h5 class="fw-semibold ff-secondary mb-4">
+                                            <span >Temperature: 23</span>
+                                        </h5>
+
+                                        <h5 class="fw-semibold ff-secondary mb-4">
+                                            <span >Temperature: 23</span>
+                                        </h5>
 
                                     </div>
                                     <div class="avatar-sm flex-shrink-0">
                                     <span class="avatar-title bg-soft-primary rounded fs-3">
-                                        <i class="bx bx-camera text-primary"></i>
+                                        <i class="bx bx-sun text-primary"></i>
                                     </span>
                                     </div>
                                 </div>
                             </div><!-- end card body -->
                         </div><!-- end card -->
                     </div><!-- end col -->
+
 
 
                 </div> <!-- end row-->

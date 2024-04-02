@@ -3,18 +3,15 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ObjetResource\Pages;
-use App\Models\Client;
 use App\Models\Objet;
 use App\Models\Project;
-use Filament\Forms;
+use Closure;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 
 class ObjetResource extends Resource
@@ -41,10 +38,19 @@ class ObjetResource extends Resource
                     ->required()
                     ->label('Code')
                     ->maxLength(20),
-                TextInput::make('elements')
+                Select::make('elements')
+                    ->multiple()
+                    ->options([
+                        "captor" => 'Capteurs',
+                        "actuator" => 'Actuateurs',
+                    ])
+                    ->afterStateUpdated(function (Closure $set, $state) {
+                        if (count($state) > 0) {
+                            $set('elements', join(",", $state));
+                        }
+                    })
                     ->required()
-                    ->label('Elements')
-                    ->maxLength(255),
+                    ->label('Elements'),
                 TextInput::make('description')
                     ->required()
                     ->label('Description')
