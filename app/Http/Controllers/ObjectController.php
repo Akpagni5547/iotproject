@@ -6,7 +6,8 @@ use App\Models\Client;
 use App\Models\Objet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ObjectController extends Controller
 {
@@ -30,11 +31,12 @@ class ObjectController extends Controller
         }
         $object = Objet::query()->with('project')->find($id);
         // call the API to get the captors data for this object
-//        $response = Http::get('http://127.0.0.1:8000/api/device-data?code='.$object->code);
-        $filePath = base_path('app/Data/captors.json');
-        $jsonContent = File::get($filePath);
-        $captors = json_decode($jsonContent, true);
-        $data = $this->formatValues($captors);
+        $captors = Http::get(env('API_URL').'/device-data?code='.$object->code);
+        Log::info('response', ['response' => $captors->json()]);
+//        $filePath = base_path('app/Data/captors.json');
+//        $jsonContent = File::get($filePath);
+//        $captors = json_decode($jsonContent, true);
+        $data = $this->formatValues($captors->json());
         $range = $request->query('range'); // "01/02/2024 to 02/03/2024"
         if ($range) {
             $range = explode(' to ', $range);
@@ -50,6 +52,11 @@ class ObjectController extends Controller
         $defaultRange = $request->query('range') != null ? $request->query('range') : date('d-m-Y',
                 strtotime('-1 month')).' to '.date('d-m-Y');
         $type = $this->getTypeObject($object->elements);
+        if ($type == "Both" || $type == "Actuator") {
+            $actuator = Http::get(env('API_URL').'/device-status?code='.$object->code);
+            return view('clients.objects.details',
+                compact('object', 'data', 'average', 'defaultRange', 'type', 'actuator'));
+        }
 
         return view('clients.objects.details', compact('object', 'data', 'average', 'defaultRange', 'type'));
     }

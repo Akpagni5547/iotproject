@@ -125,14 +125,17 @@
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
                                             <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                                                <span>Eteint</span>
+                                                <span id="text-state-command">{{ $actuator['statut'] == 'ON' ? 'Allumé' : "Eteint" }}</span>
                                             </h4>
 
                                         </div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-soft-primary rounded fs-3">
-                                        <i class="bx bx-camera text-primary"></i>
-                                    </span>
+                                        <div class="">
+                                            <!-- Rounded Buttons -->
+                                            <button type="button" id="btn-command"
+                                                    class="btn rounded-pill btn-primary waves-effect waves-light"
+                                                    onclick="sendCommand()">
+                                                {{ $actuator['statut'] == 'ON' ? 'Éteindre' : "Allumer" }}
+                                            </button>
                                         </div>
                                     </div>
                                 </div><!-- end card body -->
@@ -350,23 +353,69 @@
                     'Accept': 'application/json',
                 }
             };
-            let baseUrl = window.location.origin;
+            const apiUrl = "{{ env('API_URL') }}";
+            let url = apiUrl + '/device-data-realtime?device_id=' + {!! json_encode($object->code) !!};
             setInterval(function () {
-                fetch(baseUrl + '/api/last-captor', optionsHeaders)
+                fetch(url, optionsHeaders)
                     .then(response => response.json())
                     .then(body => {
-                        const name = Object.keys(body);
-                        const values = Object.values(body);
+                        const values = JSON.parse(body.values)
+                        delete values['dateTime']
+                        const name = Object.keys(values);
+                        const value = Object.values(values);
                         const div = document.getElementById('realtime-object')
                         div.innerHTML = '';
                         name.forEach((key, index) => {
                             const h5 = document.createElement('h5');
-                            h5.textContent = `${key}: ${values[index]}`;
+                            h5.textContent = `${key}: ${value[index]}`;
                             div.appendChild(h5);
                         });
                     });
             }, 3000)
         }
 
+    </script>
+
+    <script>
+        function sendCommand() {
+            const button = document.getElementById('btn-command');
+            const textState = document.getElementById('text-state-command');
+            // get text in button
+            const text = button.textContent.trim();
+            const apiUrl = "{{ env('API_URL') }}";
+            const url = apiUrl + '/send-command';
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    device_id: {!! json_encode($object->code) !!},
+                    command: 'ON'
+                })
+            };
+            // manage loading
+            button.textContent = 'Loading...';
+            // disable button
+            button.disabled = true;
+            fetch(url, options)
+                .then(response => response.json())
+                .then(body => {
+                    if (body['statut'] === 'success') {
+                        button.textContent = text === 'Allumer' ? 'Éteindre' : 'Allumer';
+                        textState.textContent = text === 'Allumer' ? 'Allumé' : 'Eteint';
+                    } else {
+                        button.textContent = text === 'Allumer' ? 'Allumer' : 'Éteindre';
+                        textState.textContent = text === 'Allumer' ? 'Eteint' : 'Allumé';
+                    }
+                    button.disabled = false;
+                }).catch(error => {
+                console.log('error', error)
+                button.textContent = text === 'Allumer' ? 'Allumer' : 'Éteindre';
+                textState.textContent = text === 'Allumer' ? 'Eteint' : 'Allumé';
+                button.disabled = false;
+            });
+        }
     </script>
 @endsection
