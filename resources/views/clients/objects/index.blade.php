@@ -130,7 +130,6 @@
                                 <th class="sort" data-sort="project_name">Name</th>
                                 <th class="sort" data-sort="tasks_name">Project</th>
                                 <th class="sort" data-sort="client_name">Code</th>
-                                <th class="sort" data-sort="due_date">Elements</th>
                                 <th class="sort" data-sort="status">Position</th>
                                 <th class="sort" data-sort="priority">Crée le</th>
                             </tr>
@@ -158,7 +157,6 @@
                                         }
                                     ?> text-uppercase">{{$object->code}}</span>
                                     </td>
-                                    <td><span>{{$object->elements}}</span></td>
                                     <td>{{$object->position}}</td>
                                     <td>{{$object->created_at->format('d/m/Y')}}</td>
                                 </tr>

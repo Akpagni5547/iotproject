@@ -7,7 +7,6 @@ use App\Models\Objet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 
 class ObjectController extends Controller
 {
@@ -41,7 +40,6 @@ class ObjectController extends Controller
             $range = explode(' to ', $range);
             $start_date = \DateTime::createFromFormat('d/m/Y', $range[0])->format('Y-m-d');
             $end_date = \DateTime::createFromFormat('d/m/Y', $range[1])->format('Y-m-d');
-            Log::info('date', [$start_date, $end_date]);
             $data = array_filter($data, function ($captor) use ($end_date, $start_date, $range) {
                 $date = new \DateTime($captor['date']);
                 $date_only = $date->format('Y-m-d');
@@ -51,8 +49,9 @@ class ObjectController extends Controller
         $average = $this->getAverage($data);
         $defaultRange = $request->query('range') != null ? $request->query('range') : date('d-m-Y',
                 strtotime('-1 month')).' to '.date('d-m-Y');
+        $type = $this->getTypeObject($object->elements);
 
-        return view('clients.objects.details', compact('object', 'data', 'average', 'defaultRange'));
+        return view('clients.objects.details', compact('object', 'data', 'average', 'defaultRange', 'type'));
     }
 
     private function formatValues(array $response): array
@@ -101,6 +100,23 @@ class ObjectController extends Controller
                 'photoresistance')) / count($data),
             2);
         return $average;
+    }
+
+    private function getTypeObject(string $type)
+    {
+
+        // search if the object is a captor or actuator or both i want to return Actuator or Captor or Both
+        $elements = explode(",", $type);
+        $typeObject = "";
+        if (in_array("captor", $elements) && in_array("actuator", $elements)) {
+            $typeObject = "Both";
+        } elseif (in_array("captor", $elements)) {
+            $typeObject = "Captor";
+        } elseif (in_array("actuator", $elements)) {
+            $typeObject = "Actuator";
+        }
+        return $typeObject;
+
     }
 }
 

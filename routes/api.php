@@ -18,6 +18,12 @@ use Illuminate\Support\Facades\File;
 |
 */
 
+Route::get('/last-captor', function (Request $request){
+    return response()->json(
+        ['humidite' => 34, "temperature" => 15]
+    );
+});
+
 Route::get('/secret/endpoint-values-captors-json-payload', function (Request $request) {
     $payload = $request->all();
     $code = $payload['code'];
