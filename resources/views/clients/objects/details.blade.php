@@ -338,10 +338,9 @@
                 fetch(url, optionsHeaders)
                     .then(response => response.json())
                     .then(body => {
-                        const values = JSON.parse(body.values)
-                        delete values['dateTime']
-                        const name = Object.keys(values);
-                        const value = Object.values(values);
+                        delete body['dateTime'];
+                        const name = Object.keys(body);
+                        const value = Object.values(body);
                         const div = document.getElementById('realtime-object')
                         div.innerHTML = '';
                         name.forEach((key, index) => {
