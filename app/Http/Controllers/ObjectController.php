@@ -31,81 +31,49 @@ class ObjectController extends Controller
         }
         $object = Objet::query()->with('project')->find($id);
         // call the API to get the captors data for this object
-        $captors = Http::get(env('API_URL').'/device-data?code='.$object->code);
-        Log::info('response', ['response' => $captors->json()]);
-//        $filePath = base_path('app/Data/captors.json');
-//        $jsonContent = File::get($filePath);
-//        $captors = json_decode($jsonContent, true);
-        $data = $this->formatValues($captors->json());
+        $captors = Http::get(env('API_URL').'/devices-data?code='.$object->code);
+        $data = $captors->json();
         $range = $request->query('range'); // "01/02/2024 to 02/03/2024"
         if ($range) {
             $range = explode(' to ', $range);
             $start_date = \DateTime::createFromFormat('d/m/Y', $range[0])->format('Y-m-d');
             $end_date = \DateTime::createFromFormat('d/m/Y', $range[1])->format('Y-m-d');
             $data = array_filter($data, function ($captor) use ($end_date, $start_date, $range) {
-                $date = new \DateTime($captor['date']);
+                $date = new \DateTime($captor['dateTime']);
                 $date_only = $date->format('Y-m-d');
                 return $date_only >= $start_date && $date_only <= $end_date;
             });
         }
-        $average = $this->getAverage($data);
+        $averages = $this->getAverage($data);
         $defaultRange = $request->query('range') != null ? $request->query('range') : date('d-m-Y',
                 strtotime('-1 month')).' to '.date('d-m-Y');
         $type = $this->getTypeObject($object->elements);
         if ($type == "Both" || $type == "Actuator") {
             $actuator = Http::get(env('API_URL').'/device-status?code='.$object->code);
             return view('clients.objects.details',
-                compact('object', 'data', 'average', 'defaultRange', 'type', 'actuator'));
+                compact('object', 'data', 'averages', 'defaultRange', 'type', 'actuator'));
         }
-
-        return view('clients.objects.details', compact('object', 'data', 'average', 'defaultRange', 'type'));
-    }
-
-    private function formatValues(array $response): array
-    {
-        $formattedValues = [];
-        foreach ($response as $value) {
-            $valuesJson = json_decode($value['values'], true);
-            $finalResponse = [
-                'id' => $value['id'],
-                'object_id' => $value['object_id'],
-                'date' => $valuesJson['dateTime'] ?? $value['created_at'],
-            ];
-            foreach ($valuesJson as $index => $newValue) {
-                $finalResponse[$index] = $newValue;
-            }
-            $formattedValues[] = $finalResponse;
-        }
-        return $formattedValues;
+        return view('clients.objects.details', compact('object', 'data', 'averages', 'defaultRange', 'type'));
     }
 
     private function getAverage(array $data): array
     {
+        // i want to do average on $data but i don't know in advance the keys of the array
         $average = [];
         foreach ($data as $value) {
-            if (@$value['humidite'] != null) {
-                $average['humidity']['data'] = $value['humidite'];
-            }
-            if (@$value['temperature'] != null) {
-                $average['temperature']['data'] = $value['temperature'];
-            }
-            if (@$value['luminosite'] != null) {
-                $average['luminosity']['data'] = $value['luminosite'];
-            }
-            if (@$value['photoresistance'] != null) {
-                $average['photoresistance']['data'] = $value['photoresistance'];
+            foreach ($value as $key => $item) {
+                if ($key == 'dateTime') {
+                    continue;
+                }
+                if (!isset($average[$key])) {
+                    $average[$key] = [];
+                }
+                $average[$key][] = $item;
             }
         }
-
-        $average['humidity']['average'] = count($data) == 0 ? 0 : round(array_sum(array_column($data,
-                'humidite')) / count($data), 2);
-        $average['temperature']['average'] = count($data) == 0 ? 0 : round(array_sum(array_column($data,
-                'temperature')) / count($data), 2);
-        $average['luminosity']['average'] = count($data) == 0 ? 0 : round(array_sum(array_column($data,
-                'luminosite')) / count($data), 2);
-        $average['photoresistance']['average'] = count($data) == 0 ? 0 : round(array_sum(array_column($data,
-                'photoresistance')) / count($data),
-            2);
+        foreach ($average as $key => $value) {
+            $average[$key] = array_sum($value) / count($value);
+        }
         return $average;
     }
 

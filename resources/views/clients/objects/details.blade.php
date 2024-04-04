@@ -54,61 +54,34 @@
 
                 <div class="row">
                     @if( $type == "Captor" || $type == "Both")
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                Moyenne humidité</p>
+                        @foreach( $averages as $key => $value)
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1 overflow-hidden">
+                                                <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
+                                                    Moyenne {{$key}}</p>
+                                            </div>
                                         </div>
-
-                                    </div>
-                                    <div class="d-flex align-items-end justify-content-between mt-4">
-                                        <div>
-                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4">
+                                        <div class="d-flex align-items-end justify-content-between mt-4">
+                                            <div>
+                                                <h4 class="fs-22 fw-semibold ff-secondary mb-4">
                                             <span class="counter-value"
-                                                  data-target="{{ $average['humidity']['average'] }}">0</span>
-                                            </h4>
-                                        </div>
-                                        <div class="avatar-sm flex-shrink-0">
+                                                  data-target="{{round($value, 2)}}">0</span>
+                                                </h4>
+                                            </div>
+                                            <div class="avatar-sm flex-shrink-0">
                                     <span class="avatar-title bg-soft-primary rounded fs-3">
                                         <i class="bx bx-water text-primary"></i>
                                     </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-                    @endif
-                    @if( $type == "Captor" || $type == "Both")
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                Moyenne température</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-end justify-content-between mt-4">
-                                        <div>
-                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                                            <span class="counter-value"
-                                                  data-target="{{ $average['temperature']['average'] }}">0</span>
-                                            </h4>
-                                        </div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-soft-primary rounded fs-3">
-                                       <i class='bx bxs-thermometer text-primary'></i>
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
+                                </div>
+                            </div>
+                        @endforeach
                     @endif
                     @if( $type == "Actuator" || $type == "Both")
                         <div class="col-xl-3 col-md-6">
@@ -125,7 +98,8 @@
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
                                             <h4 class="fs-22 fw-semibold ff-secondary mb-4">
-                                                <span id="text-state-command">{{ $actuator['statut'] == 'ON' ? 'Allumé' : "Eteint" }}</span>
+                                                <span
+                                                    id="text-state-command">{{ $actuator['statut'] == 'ON' ? 'Allumé' : "Eteint" }}</span>
                                             </h4>
 
                                         </div>
@@ -142,34 +116,7 @@
                             </div><!-- end card -->
                         </div><!-- end col -->
                     @endif
-                    @if( $type == "Captor" || $type == "Both")
-                        <div class="col-xl-3 col-md-6">
-                            <!-- card -->
-                            <div class="card card-animate">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                Donnée actuelle</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-end justify-content-between mt-4">
-                                        <div id="realtime-object">
-                                            <div class="spinner-border" role="status">
-                                                <span class="sr-only">Loading...</span>
-                                            </div>
-                                        </div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                    <span class="avatar-title bg-soft-primary rounded fs-3">
-                                        <i class="bx bx-sun text-primary"></i>
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div><!-- end card body -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-                    @endif
-                </div> <!-- end row-->
+                </div>
 
                 @if( $type == "Captor" || $type == "Both")
                     <div class="row">
@@ -177,15 +124,15 @@
                             <div class="card">
                                 <div class="card-header border-0 align-items-center d-flex">
                                     <h4 class="card-title mb-0 flex-grow-1">Graphe</h4>
-                                </div><!-- end card header -->
+                                </div>
 
                                 <div class="card-body p-0 pb-2">
                                     <div class="w-100">
                                         <div id="customer_impression_charts"
-                                             data-colors='["#FF5733", "#336600"]' class="apex-charts"
+                                             data-colors='["#FF5733", "#336600", "#6793DA"]' class="apex-charts"
                                              dir="ltr"></div>
                                     </div>
-                                </div><!-- end card body -->
+                                </div>
                             </div><!-- end card -->
                         </div><!-- end col -->
                     </div>
@@ -243,25 +190,30 @@
             var linechartcustomerColors = getChartColorsArray("customer_impression_charts");
             if (linechartcustomerColors) {
                 const response = {!! json_encode($data) !!};
-                const date = response.map((item) => item.date);
-                const temperature = response.map((item) => item['temperature']).filter(
-                    (item) => item !== undefined
-                );
-                const humidity = response.map((item) => item['humidite']).filter(
-                    (item) => item !== undefined
-                );
-                var options = {
-                    series: [{
-                        name: "Temperature",
+                const date = response.map((item) => item.dateTime);
+                const dataByKey = {};
+                response.forEach(item => {
+                    Object.entries(item).forEach(([key, value]) => {
+                        if (key === 'dateTime') return;
+                        if (!dataByKey[key]) {
+                            dataByKey[key] = []; // Créez un tableau vide si la clé n'existe pas encore
+                        }
+                        dataByKey[key].push(value); // Ajoutez la valeur à la clé correspondante
+                    });
+                });
+                // Affiche les données organisées par clé
+                let series = [];
+                Object.entries(dataByKey).forEach(([key, values]) => {
+                    series.push({
+                        name: key,
                         type: "area",
-                        data: temperature,
-                    },
-                        {
-                            name: "Humidité",
-                            type: "area",
-                            data: humidity,
-                        },
-                    ],
+                        data: values,
+
+                    })
+
+                });
+                var options = {
+                    series: series,
                     chart: {
                         height: 370,
                         type: "line",
@@ -275,10 +227,10 @@
                         width: [4, 0,],
                     },
                     fill: {
-                        opacity: [0.6, 0.3,],
+                        opacity: [0.6, 0.3, 0.5],
                     },
                     markers: {
-                        size: [0, 0,],
+                        size: [0, 0, 0],
                         strokeWidth: 2,
                         hover: {
                             size: 4,
@@ -375,7 +327,6 @@
         }
 
     </script>
-
     <script>
         function sendCommand() {
             const button = document.getElementById('btn-command');
